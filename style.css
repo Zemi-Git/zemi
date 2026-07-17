@@ -1,0 +1,36 @@
+body {
+  font-family: system-ui, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+/* チェックボックスは隠す */
+.faq-toggle {
+  display: none;
+}
+
+/* 質問行の見た目 */
+.faq-question {
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* 回答の初期状態：隠す */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 12px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* チェックされたときだけ回答を表示 */
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 200px; /* 十分大きめにしておく */
+  padding: 8px 12px;
+}
