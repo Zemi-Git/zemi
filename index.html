@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>関西大学総合情報学部 FAQ</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,9 +11,29 @@
 <h1>関西大学総合情報学部 FAQ</h1>
 
 
-<!-- カテゴリ1 -->
-<h2 class="category-title">
-  学部について
+<!-- カテゴリ一覧 -->
+<div class="category-menu">
+
+  <a href="#exam">
+    入学試験について
+  </a>
+
+  <a href="#faculty">
+    学部について
+  </a>
+
+  <a href="#study">
+    学習・授業について
+  </a>
+
+</div>
+
+
+
+
+<!-- 入学試験について -->
+<h2 id="exam" class="category-title">
+  入学試験について
 </h2>
 
 
@@ -23,8 +42,40 @@
   <input type="checkbox" id="q1" class="faq-toggle">
 
   <label for="q1" class="faq-question">
+    Q. 入学試験について教えてください。
+  </label>
+
+  <div class="faq-answer">
+
+    <p>
+      A. 入試制度や募集要項については最新情報をご確認ください。
+    </p>
+
+    <a href="#" class="reference">
+      入試情報
+    </a>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- 学部について -->
+<h2 id="faculty" class="category-title">
+  学部について
+</h2>
+
+
+<div class="faq-item">
+
+  <input type="checkbox" id="q2" class="faq-toggle">
+
+  <label for="q2" class="faq-question">
     Q. 関西大学総合情報学部は文理融合の学部ですか？
   </label>
+
 
   <div class="faq-answer">
 
@@ -32,7 +83,7 @@
       A. はい。文系・理系の枠を超えて情報学を学ぶことができます。
     </p>
 
-    <a href="https://www.kansai-u.ac.jp/Fc_inf/" class="reference">
+    <a href="#" class="reference">
       総合情報学部について
     </a>
 
@@ -42,32 +93,9 @@
 
 
 
-<div class="faq-item">
 
-  <input type="checkbox" id="q2" class="faq-toggle">
-
-  <label for="q2" class="faq-question">
-    Q. どのような分野を学べますか？
-  </label>
-
-  <div class="faq-answer">
-
-    <p>
-      A. 情報技術、メディア、社会システムなど幅広い分野を学べます。
-    </p>
-
-    <a href="https://www.kansai-u.ac.jp/Fc_inf/" class="reference">
-      学部概要
-    </a>
-
-  </div>
-
-</div>
-
-
-
-<!-- カテゴリ2 -->
-<h2 class="category-title">
+<!-- 学習・授業について -->
+<h2 id="study" class="category-title">
   学習・授業について
 </h2>
 
@@ -80,10 +108,11 @@
     Q. プログラミングを学べますか？
   </label>
 
+
   <div class="faq-answer">
 
     <p>
-      A. はい。情報技術に関する授業があります。
+      A. 情報技術に関する授業があります。
     </p>
 
     <a href="#" class="reference">
