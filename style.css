@@ -1,27 +1,38 @@
 body {
   font-family: system-ui, sans-serif;
   padding: 20px;
+  line-height: 1.6;
 }
 
 h1 {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-/* チェックボックスは隠す */
+/* FAQ全体 */
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+/* チェックボックスを非表示 */
 .faq-toggle {
   display: none;
 }
 
-/* 質問行の見た目 */
+/* 質問部分 */
 .faq-question {
   display: block;
-  padding: 8px 12px;
-  margin-bottom: 4px;
-  background: #f0f0f0;
+  background: #f5f5f5;
+  padding: 12px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-/* 回答の初期状態：隠す */
+.faq-question:hover {
+  background: #ececec;
+}
+
+/* 回答部分（閉じた状態） */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -29,8 +40,32 @@ h1 {
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-/* チェックされたときだけ回答を表示 */
+/* 開いた状態 */
 .faq-toggle:checked + .faq-question + .faq-answer {
-  max-height: 200px; /* 十分大きめにしておく */
-  padding: 8px 12px;
+  max-height: 300px;
+  padding: 12px;
+}
+
+/* 引用先リンク */
+.reference {
+  display: block;
+  margin-top: 10px;
+  color: #005BAC;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* リンクの前に▶を付ける */
+.reference::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+  color: #005BAC;
+  vertical-align: middle;
+}
+
+/* ホバー時 */
+.reference:hover {
+  text-decoration: underline;
 }
