@@ -1,71 +1,156 @@
 body {
+
   font-family: system-ui, sans-serif;
+
   padding: 20px;
+
   line-height: 1.6;
+
+  color: #333;
+
 }
+
 
 h1 {
-  margin-bottom: 20px;
+
+  margin-bottom: 30px;
+
 }
+
+
+
+/* カテゴリ名 */
+
+.category-title {
+
+  font-size: 22px;
+
+  margin-top: 35px;
+
+  margin-bottom: 12px;
+
+  padding: 10px 15px;
+
+  border-left: 6px solid #005bac;
+
+  background-color: #f3f7fb;
+
+}
+
+
 
 /* FAQ全体 */
+
 .faq-item {
+
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+
 }
 
-/* チェックボックスを非表示 */
+
+
+/* checkbox非表示 */
+
 .faq-toggle {
+
   display: none;
+
 }
 
-/* 質問部分 */
+
+
+/* 質問 */
+
 .faq-question {
+
   display: block;
-  background: #f5f5f5;
-  padding: 12px;
+
+  padding: 12px 15px;
+
+  background-color: #f0f0f0;
+
   cursor: pointer;
+
   font-weight: bold;
+
+  border-radius: 4px;
+
 }
+
+
 
 .faq-question:hover {
-  background: #ececec;
+
+  background-color: #e5e5e5;
+
 }
 
-/* 回答部分（閉じた状態） */
+
+
+/* 回答 */
+
 .faq-answer {
+
   max-height: 0;
+
   overflow: hidden;
-  padding: 0 12px;
+
+  padding: 0 15px;
+
   transition: max-height 0.3s ease, padding 0.3s ease;
+
 }
 
-/* 開いた状態 */
-.faq-toggle:checked + .faq-question + .faq-answer {
+
+
+/* 開いた時 */
+
+.faq-toggle:checked 
++ .faq-question 
++ .faq-answer {
+
   max-height: 300px;
-  padding: 12px;
+
+  padding: 15px;
+
 }
 
-/* 引用先リンク */
+
+
+/* 引用先 */
+
 .reference {
+
   display: block;
+
   margin-top: 10px;
-  color: #005BAC;
+
+  color: #0066cc;
+
   text-decoration: none;
+
   font-size: 14px;
+
 }
 
-/* リンクの前に▶を付ける */
+
+
 .reference::before {
+
   content: "▶";
-  display: inline-block;
-  margin-right: 6px;
+
   font-size: 11px;
-  color: #005BAC;
-  vertical-align: middle;
+
+  margin-right: 6px;
+
+  color: #0066cc;
+
 }
 
-/* ホバー時 */
+
+
 .reference:hover {
+
   text-decoration: underline;
+
 }
