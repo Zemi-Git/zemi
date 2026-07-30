@@ -1,6 +1,66 @@
-/* FAQ全体の余白 */
-.faq-item {
+/* 全体のフォントと背景 */
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  color: #003366;
+  letter-spacing: 1px;
+}
+
+/* カテゴリメニュー */
+.category-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.category-menu a {
+  padding: 10px 18px;
+  background: #e8f0fe;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.category-menu a:hover {
+  background: #d0e2ff;
+}
+
+/* カテゴリタイトル */
+.category-title {
+  margin-top: 50px;
   margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #003366;
+  border-left: 6px solid #4a90e2;
+  padding-left: 10px;
+}
+
+/* FAQアイテム全体 */
+.faq-item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* 質問部分 */
@@ -8,19 +68,31 @@
   display: block;
   font-weight: bold;
   cursor: pointer;
-  padding: 10px;
-  background: #f0f0f0;
-  border-radius: 4px;
+  padding: 15px;
+  background: #f0f4ff;
+  border-radius: 8px 8px 0 0;
+  color: #003366;
+  transition: 0.2s;
+}
+
+.faq-question:hover {
+  background: #e0e8ff;
 }
 
 /* 回答部分（初期は非表示） */
 .faq-answer {
   display: none;
-  padding: 10px;
-  background: #fafafa;
-  border-left: 3px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #ddd;
+  animation: fadeIn 0.3s ease;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* チェックボックスは非表示 */
@@ -33,27 +105,15 @@
   display: block;
 }
 
-/* カテゴリメニュー */
-.category-menu {
-  margin-bottom: 30px;
-}
-
-.category-menu a {
-  margin-right: 20px;
-  font-weight: bold;
-  text-decoration: none;
+/* リンク（参考URL） */
+.reference {
+  display: block;
+  margin-top: 8px;
   color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.category-menu a:hover {
+.reference:hover {
   text-decoration: underline;
-}
-
-/* カテゴリタイトル */
-.category-title {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 1.5em;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
 }
