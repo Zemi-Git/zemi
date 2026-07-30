@@ -108,10 +108,16 @@ h1 {
 /* リンク（参考URL） */
 .reference {
   display: block;
-  margin-top: 1px;
+  margin: 0;
+  padding: 0;
   color: #0066cc;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* 複数リンクが並ぶときの隙間を完全に消す */
+.reference + .reference {
+  margin-top: 0;    /* ← 2つ目以降のリンクの余白ゼロ */
 }
 
 .reference:hover {
