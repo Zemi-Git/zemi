@@ -115,11 +115,6 @@ h1 {
   font-weight: bold;
 }
 
-/* 複数リンクが並ぶときの隙間を完全に消す */
-.reference + .reference {
-  margin-top: 0;    /* ← 2つ目以降のリンクの余白ゼロ */
-}
-
 .reference:hover {
   text-decoration: underline;
 }
