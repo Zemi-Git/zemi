@@ -108,7 +108,7 @@ h1 {
 /* リンク（参考URL） */
 .reference {
   display: block;
-  margin-top: 8px;
+  margin-top: 0;
   color: #0066cc;
   text-decoration: none;
   font-weight: bold;
